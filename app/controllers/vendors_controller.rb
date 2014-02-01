@@ -1,6 +1,6 @@
 class VendorsController < ApplicationController
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
-  before_action :set_qb_service, only: [:create, :edit, :update, :destroy]
+  before_action :set_qb_service, only: [:index, :create, :edit, :update, :destroy]
 
   # GET /vendors
   # GET /vendors.json
@@ -46,6 +46,12 @@ class VendorsController < ApplicationController
   # PATCH/PUT /vendors/1
   # PATCH/PUT /vendors/1.json
   def update
+    Quickbooks.logger = Rails.logger
+    Quickbooks.log = true
+    vendor = @vendor_service.query.entries.find{ |e| e.given_name == vendor_params[:name] }
+    vendor.email_address = vendor_params[:email_address]
+    @vendor_service.update(vendor)
+
     respond_to do |format|
       if @vendor.update(vendor_params)
         format.html { redirect_to @vendor, notice: 'Vendor was successfully updated.' }
