@@ -9,7 +9,7 @@
 <body>
 
 <% unless session[:token] %>
-  <ipp:connectToIntuit></ipp:connectToIntuit>
+  <%= link_to 'Link To QuickBooks', authenticate_vendors_url %>
 <% end %>
 
 <% if notice %>
@@ -17,12 +17,6 @@
 <% end %>
 
 <%= yield %>
-
-<script type="text/javascript" src="https://appcenter.intuit.com/Content/IA/intuit.ipp.anywhere.js"></script>
-
-<script>
-  intuit.ipp.anywhere.setup({menuProxy: '/path/to/blue-dot', grantUrl: '<%= authenticate_vendors_url %>'});
-</script>
 
 </body>
 </html>
