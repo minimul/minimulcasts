@@ -48,7 +48,7 @@ class VendorsController < ApplicationController
   def update
     Quickbooks.logger = Rails.logger
     Quickbooks.log = true
-    vendor = @vendor_service.query.entries.find{ |e| e.given_name == vendor_params[:name] }
+    vendor = @vendor_service.query("SELECT * FROM VENDOR WHERE GivenName = '#{vendor_params[:name]}'").entries.first
     vendor.email_address = vendor_params[:email_address]
     @vendor_service.update(vendor)
 
