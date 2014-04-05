@@ -85,6 +85,7 @@ class VendorsController < ApplicationController
     session[:token] = at.token
     session[:secret] = at.secret
     session[:realm_id] = params['realmId']
+    Account.create(name: 'Test Account', qb_token: at.token, qb_secret: at.secret, qb_company_id: params['realmId'])
     redirect_to root_url, notice: "Your QuickBooks account has been successfully linked."
   end
 

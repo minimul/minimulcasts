@@ -1,6 +1,6 @@
 
-QB_KEY = "<insert>"
-QB_SECRET = "<insert>"
+QB_KEY = ENV['MINIMULCASTS_CONSUMER_KEY']
+QB_SECRET = ENV['MINIMULCASTS_CONSUMER_SECRET']
 
 $qb_oauth_consumer = OAuth::Consumer.new(QB_KEY, QB_SECRET, {
     :site                 => "https://oauth.intuit.com",
