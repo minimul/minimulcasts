@@ -27,10 +27,10 @@ class VendorsController < ApplicationController
   def create
     @vendor = Vendor.new(vendor_params)
 
-    vendor = Quickbooks::Model::Vendor.new
+    vendor = @base.qr_model :vendor
     vendor.given_name = vendor_params[:name]
     vendor.email_address = vendor_params[:email_address]
-    @vendor_service.create(vendor)
+    @base.service.create(vendor)
 
     respond_to do |format|
       if @vendor.save
@@ -93,10 +93,11 @@ class VendorsController < ApplicationController
   private
 
     def set_qb_service
-      oauth_client = OAuth::AccessToken.new($qb_oauth_consumer, session[:token], session[:secret])
-      @vendor_service = Quickbooks::Service::Vendor.new
-      @vendor_service.access_token = oauth_client
-      @vendor_service.company_id = session[:realm_id]
+      #oauth_client = OAuth::AccessToken.new($qb_oauth_consumer, session[:token], session[:secret])
+      #@vendor_service = Quickbooks::Service::Vendor.new
+      #@vendor_service.access_token = oauth_client
+      #@vendor_service.company_id = session[:realm_id]
+      @base = Quickbooks::Base.new(@account, :vendor)
     end
 
     # Use callbacks to share common setup or constraints between actions.
