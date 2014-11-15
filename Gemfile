@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.6'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -12,7 +12,7 @@ gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-gem 'quickbooks-ruby', git: 'git://github.com/ruckus/quickbooks-ruby.git'
+gem 'quickbooks-ruby', github: 'ruckus/quickbooks-ruby'
 gem 'oauth-plugin'
 
 # Use CoffeeScript for .js.coffee assets and views
