@@ -77,6 +77,7 @@ class VendorsController < ApplicationController
     callback = oauth_callback_vendors_url
     token = $qb_oauth_consumer.get_request_token(:oauth_callback => callback)
     session[:qb_request_token] = token
+    # session[:qb_request_token] = Marshal.dump(token) # If Rails 4.1
     redirect_to(token.authorize_url) and return
   end
 
