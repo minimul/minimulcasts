@@ -9,6 +9,8 @@ $qb_oauth_consumer = OAuth::Consumer.new(QB_KEY, QB_SECRET, {
     :access_token_path    => "/oauth/v1/get_access_token"
 })
 
+Quickbooks.sandbox_mode = true
+
 Quickbooks::Base.configure do |c|
   c.persistent_token = 'qb_token'
   c.persistent_secret = 'qb_secret'
