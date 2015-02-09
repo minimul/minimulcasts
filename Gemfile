@@ -45,6 +45,7 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'vcr'
+  gem 'webmock'
 end
 
 # Use ActiveModel has_secure_password
