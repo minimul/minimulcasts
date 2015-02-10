@@ -10,12 +10,26 @@ describe 'QBO requests' do
     custom_field.type = "StringType"
     custom_field.string_value = "LFI12345678"
     invoice.custom_fields = [custom_field]
+
+    invoice.customer_id = 2
+
+    line_item = base.qr_model(:invoice_line_item)
+    line_item.amount = 50
+    line_item.description = "Plush Baby Doll"
+    line_item.sales_item! do |detail|
+      detail.unit_price = 50
+      detail.quantity = 1
+      detail.item_id = 1
+      detail.tax_code_id = 'NON'
+    end
+
+    invoice.line_items << line_item
     puts invoice.to_xml
     #invoice_service = base.create_service_for(:invoice)
     #invoice_service = Quickbooks::Base.new(account, :invoice)
     #puts invoice_service
     VCR.use_cassette("qbo/invoice_with_custom_fields") do
-      base.service.create(invoice)
+      #base.service.create(invoice)
     end
   end
 end
