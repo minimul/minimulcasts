@@ -9,6 +9,7 @@ http_interactions:
         <?xml version="1.0" encoding="utf-8"?>
         <Invoice xmlns="http://schema.intuit.com/finance/v3" sparse="false">
         <CustomField>
+        <DefinitionId>5</DefinitionId>
         <Name>LFI Invoice #</Name>
         <Type>StringType</Type>
         <StringValue>LFI12345678</StringValue>
@@ -36,11 +37,11 @@ http_interactions:
       User-Agent:
       - OAuth gem v0.4.7
       Content-Length:
-      - '529'
+      - '560'
       Authorization:
-      - OAuth oauth_body_hash="Q3L6%2FTwdlKug6M%2BR%2FLMkk%2F6IKQE%3D", oauth_consumer_key="<CONSUMER_KEY>",
-        oauth_nonce="BsyWEZzGPnm8rQFIo0KxkDFKs4cnptXAipXFns0t8", oauth_signature="Q2wtksRfiZSUl%2Bnvw3d06q60f%2BY%3D",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1423573662", oauth_token="<ACCESS_TOKEN>",
+      - OAuth oauth_body_hash="Xku0%2FflwOjU4gTr3Z1fNRdlXvDM%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="QYXeE4Xaux0USeh0DWoJcUR8tzUsz6VKCTSbBPKaKBk", oauth_signature="6GntOqvDrmtrn7c5Hq0QNPT9zME%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1423581354", oauth_token="<ACCESS_TOKEN>",
         oauth_version="1.0"
   response:
     status:
@@ -48,17 +49,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 10 Feb 2015 13:07:43 GMT
-      Content-Encoding:
-      - gzip
+      - Tue, 10 Feb 2015 15:15:55 GMT
       Via:
       - 1.1 ipp-gateway-ap06
       Content-Type:
       - application/xml;charset=UTF-8
       Content-Length:
-      - '779'
+      - '778'
       Intuit-Tid:
-      - 5207a53d-3a15-4d28-8e18-9e9f427dc035
+      - 7bd2e833-3477-4bef-bbcf-9de38e3e1d73
+      Content-Encoding:
+      - gzip
       Cache-Control:
       - max-age=0, no-cache, no-store, must-revalidate, private
       Expires:
@@ -68,24 +69,24 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAN1VTVPjMAz9K5nsYU9tvtoFOqqZtF0GZqAtNMyeTeJSzzp2
-        JnYK+fcrJ7QJUIb7XlpLepKeZFmBy9dcOHtWaq7k1A2GvuswmaqMy+ep+5hc
-        Dc5dRxsqMyqUZFO3Ztq9JHAjTcXNA9OFkpo5GETqqbszpph4nk53LKdD3mCG
-        qcq9LZdUpszbR65jeI5xQj8YD/xwEPiJP574Z5NRNIxG/sA/n/i+axPsFU+Z
-        k6mccmR2P1shkYKWGp23VGhmQRkJxr/Aw3/Y1DJN1F8miQ9eJ8AdM3RBDSUw
-        Lxk1LMH05ET2NjN4PRTcUm0eiwzl7Du3j1DweokrbVR+xZlAnguGzeAG223Z
-        g/dOhiVFX6Tw4vwArxEgqQtGNqbEG7FH8BoFEn0XVaXLKn9iJQn80QVGPcqQ
-        vEqk0SePId50cMsla/vYdtHK6GjFwxEZ67TkhaVI1qLSO2dGn2pnoYSw9Dsj
-        xLmqpCFjf2hb8iahv6FctGVQwfSNYbkN3uptiKMdTgCQHsoPbOtIaidnw8o9
-        ToZ2G86ticAj9nBdoh6zg9dJcG9qC7R/kNDXucqYdViultiGTsaZOZXaaxvU
-        /n5fXvWUKEPFl9V9snvHFHglSOeQt4GhbIf5eG7urQdqJ4CVXW9mXIif2vnD
-        ZaarcutsdqpwSXgYlgZKwKLiLCubi4+6iw9IEDqrlFHpLMphSyzANBx7d03F
-        1rlTSuLl1xjP6mBuO1DWWNaC77ldIbadZB4j4LQJ1gq3iWjOF6MwwOw9DT44
-        Q6Kz4Sjyz/yz0L4qbPCtks9kEIThcBRejMNohHqrAq8rZLPjxX9RUlfIomK9
-        dxshGofpTdfOR5wfh/EoQ1wUosYhibeGlQuu02ZKm42JM3vSCPhUpNkYaipN
-        lgw3mGo0WEjPAL9xE4sDSpkNQ0BfBzMq7JY/cDqI+EIKpbmxs3w4QiyEerlZ
-        L9e0zlmP4Ad1i1tJgfd2Cvre0kfjEs24mdMy+9rvM6YfIZ5ff+3aM+K0tR+r
-        5tT/LpJ/rZJYUl8HAAA=
+        H4sIAAAAAAAAAN1V32/iMAz+V6rewz1Bf0DFhkymAjdt0g7Y6HTPWRtGdGlS
+        NSlb//tz2kG7jWnv9wKx/dn+7DguXL3mwjmwUnMlZ24w9F2HyVRlXD7P3Mfk
+        enDhOtpQmVGhJJu5NdPuFYFbaSpuHpgulNTMwSBSz9y9McXU83S6Zzkd8gYz
+        TFXu7bikMmXeYeQ6hucYJ/SDaOCHg8BP/Mk0iKZRNIwmwcC/mPq+axMcFE+Z
+        k6mccmR2P18jkYKWGp13VGhmQRkJogvw8B+2tUwT9ZdJ4oPXCfCbGbqkhhJY
+        lIwalmB6ciZ7mxm8HgruqDaPRYZy9p3bRyh4vcSVNiq/5kwgzyXDZnCD7bbs
+        wXsnw4qiL1J4cX6A1wiQ1AUjW1PijdgjeI0Cib6LqtJVlT+xkgR+ZKOeZEhe
+        JdLok8cQbzq445K1fWy7aGV0tOLxiIx1WvLCUiQbUem9M6dPtbNUQlj6nRHi
+        XFXSkMgf2pa8SehvKBdtGVQwfWtYboO3ehviZIczAKSH8gPbOZLaydmy8oCT
+        od2Gc2si8Ig93JSox+zgdRLcm9oC7R8k9HWhMmYdVusVtqGTcWbOpfbaBrW/
+        35dXPSXKUPFldZ/s3ikFXgnSOeZtYCjbYT6dm3vrgdoJYGXXmzkX4qd2/nCZ
+        6arcOdu9KlwSHoelgRKwqDjLyubiR93FByQInXXKqHSW5bAlFmAajr27oWLn
+        /FZK4uXXGM/qYGE7UNZY1pIfuF0htp1kESPgvAk2CreJaM6X4zDA7D0NPjhD
+        RpPheORP/EloXxU2+E7JZzIIwnA4Di+jcDRGvVWB1xWy3fPivyipK2RZsd67
+        HSEah+lN185HnJ+G8SRDXBSixiGJd4aVS67TZkqbjYkze9YI+FSk2RpqKk1W
+        DDeYajRYSM8Av3ATiyNKmS1DQF8Hcyrslj9yOor4QgqlubGzfDxCLIR6ud2s
+        NrTOWY/gB3WLW0uB93YO+t7SR+MSzbhZ0DL72u8zph8hXtx87doz4rS1H6vm
+        1P8ukn/UTRzSXwcAAA==
     http_version: 
-  recorded_at: Tue, 10 Feb 2015 13:07:43 GMT
+  recorded_at: Tue, 10 Feb 2015 15:15:55 GMT
 recorded_with: VCR 2.9.3
