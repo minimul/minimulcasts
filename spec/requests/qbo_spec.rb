@@ -24,12 +24,10 @@ describe 'QBO requests' do
     end
 
     invoice.line_items << line_item
-    puts invoice.to_xml
-    #invoice_service = base.create_service_for(:invoice)
-    #invoice_service = Quickbooks::Base.new(account, :invoice)
-    #puts invoice_service
-    VCR.use_cassette("qbo/invoice_with_custom_fields") do
-      #base.service.create(invoice)
+    #puts invoice.to_xml
+    VCR.use_cassette("qbo/invoice_with_custom_fields", record: :all) do
+      result = base.service.create(invoice)
+      p result.id
     end
   end
 end

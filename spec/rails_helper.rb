@@ -7,8 +7,10 @@ require 'factory_girl_rails'
 require 'vcr'
 
 VCR.configure do |config|
-  config.cassette_library_dir = "vcr"
+  config.cassette_library_dir = Rails.root.join('spec', 'vcr')
   config.hook_into :webmock
+  config.filter_sensitive_data('<ACCESS_TOKEN>') { URI.encode_www_form_component(ENV['MINIMULCASTS_ACCESS_TOKEN']) }
+  config.filter_sensitive_data('<CONSUMER_KEY>') { URI.encode_www_form_component(ENV['MINIMULCASTS_CONSUMER_KEY']) }
 end
 # Add additional requires below this line. Rails is not loaded until this point!
 

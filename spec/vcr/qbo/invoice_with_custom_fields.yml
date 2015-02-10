@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/1292740145/invoice
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Invoice xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <CustomField>
+        <Name>LFI Invoice #</Name>
+        <Type>StringType</Type>
+        <StringValue>LFI12345678</StringValue>
+        </CustomField>
+        <Line>
+        <Description>Plush Baby Doll</Description>
+        <Amount>50.0</Amount>
+        <DetailType>SalesItemLineDetail</DetailType>
+        <SalesItemLineDetail>
+        <ItemRef>1</ItemRef>
+        <UnitPrice>50.0</UnitPrice>
+        <Qty>1.0</Qty>
+        <TaxCodeRef>NON</TaxCodeRef>
+        </SalesItemLineDetail>
+        </Line>
+        <CustomerRef>2</CustomerRef>
+        </Invoice>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '529'
+      Authorization:
+      - OAuth oauth_body_hash="Q3L6%2FTwdlKug6M%2BR%2FLMkk%2F6IKQE%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="BsyWEZzGPnm8rQFIo0KxkDFKs4cnptXAipXFns0t8", oauth_signature="Q2wtksRfiZSUl%2Bnvw3d06q60f%2BY%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1423573662", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Feb 2015 13:07:43 GMT
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 ipp-gateway-ap06
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '779'
+      Intuit-Tid:
+      - 5207a53d-3a15-4d28-8e18-9e9f427dc035
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '82.221'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAN1VTVPjMAz9K5nsYU9tvtoFOqqZtF0GZqAtNMyeTeJSzzp2
+        JnYK+fcrJ7QJUIb7XlpLepKeZFmBy9dcOHtWaq7k1A2GvuswmaqMy+ep+5hc
+        Dc5dRxsqMyqUZFO3Ztq9JHAjTcXNA9OFkpo5GETqqbszpph4nk53LKdD3mCG
+        qcq9LZdUpszbR65jeI5xQj8YD/xwEPiJP574Z5NRNIxG/sA/n/i+axPsFU+Z
+        k6mccmR2P1shkYKWGp23VGhmQRkJxr/Aw3/Y1DJN1F8miQ9eJ8AdM3RBDSUw
+        Lxk1LMH05ET2NjN4PRTcUm0eiwzl7Du3j1DweokrbVR+xZlAnguGzeAG223Z
+        g/dOhiVFX6Tw4vwArxEgqQtGNqbEG7FH8BoFEn0XVaXLKn9iJQn80QVGPcqQ
+        vEqk0SePId50cMsla/vYdtHK6GjFwxEZ67TkhaVI1qLSO2dGn2pnoYSw9Dsj
+        xLmqpCFjf2hb8iahv6FctGVQwfSNYbkN3uptiKMdTgCQHsoPbOtIaidnw8o9
+        ToZ2G86ticAj9nBdoh6zg9dJcG9qC7R/kNDXucqYdViultiGTsaZOZXaaxvU
+        /n5fXvWUKEPFl9V9snvHFHglSOeQt4GhbIf5eG7urQdqJ4CVXW9mXIif2vnD
+        ZaarcutsdqpwSXgYlgZKwKLiLCubi4+6iw9IEDqrlFHpLMphSyzANBx7d03F
+        1rlTSuLl1xjP6mBuO1DWWNaC77ldIbadZB4j4LQJ1gq3iWjOF6MwwOw9DT44
+        Q6Kz4Sjyz/yz0L4qbPCtks9kEIThcBRejMNohHqrAq8rZLPjxX9RUlfIomK9
+        dxshGofpTdfOR5wfh/EoQ1wUosYhibeGlQuu02ZKm42JM3vSCPhUpNkYaipN
+        lgw3mGo0WEjPAL9xE4sDSpkNQ0BfBzMq7JY/cDqI+EIKpbmxs3w4QiyEerlZ
+        L9e0zlmP4Ad1i1tJgfd2Cvre0kfjEs24mdMy+9rvM6YfIZ5ff+3aM+K0tR+r
+        5tT/LpJ/rZJYUl8HAAA=
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 13:07:43 GMT
+recorded_with: VCR 2.9.3
