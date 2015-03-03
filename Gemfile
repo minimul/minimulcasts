@@ -36,6 +36,19 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem 'spring'
+  gem 'better_errors'
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'vcr'
+  gem 'webmock'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
