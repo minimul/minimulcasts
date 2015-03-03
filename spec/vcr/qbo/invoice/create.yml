@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/1292740145/invoice
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Invoice xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <Line>
+        <Description>Plush Baby Doll</Description>
+        <Amount>50.0</Amount>
+        <DetailType>SalesItemLineDetail</DetailType>
+        <SalesItemLineDetail>
+        <ItemRef>1</ItemRef>
+        <UnitPrice>50.0</UnitPrice>
+        <Qty>1.0</Qty>
+        <TaxCodeRef>NON</TaxCodeRef>
+        </SalesItemLineDetail>
+        </Line>
+        <CustomerRef>2</CustomerRef>
+        </Invoice>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '410'
+      Authorization:
+      - OAuth oauth_body_hash="lZQrVdWiKQDJerCurNQ9eUIF7%2BE%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="zwIWp8TyWCXdjXq37gYQSdjeasOtXTYzoYDL1vqZnT0", oauth_signature="v9ZK62GaqgQCtFjRY%2Fdqe8Y9OUU%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1425422101", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 03 Mar 2015 22:35:03 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '782'
+      Intuit-Tid:
+      - d3ed1931-a89a-4d3c-a36e-c3029d2f3b98
+      Content-Encoding:
+      - gzip
+      Via:
+      - 1.1 ipp-gateway-.net
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '83.489'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAN1V32/iMAz+V6rewz1BfwDHQCZTgZs2aQM2Ot1z1oYRXZpU
+        TcrW//6cdtBuY9r7SQhi+7P92XEMXL5mwjmwQnMlZ27Q912HyUSlXD7P3Mf4
+        qnfhOtpQmVKhJJu5FdPuJYEbaUpuHpjOldTMwSBSz9y9MfnU83SyZxnt8xrT
+        T1Tm7bikMmHeYeA6hmcYJ/SDUc8f4CcOhtNBOA0m/Ysxqi6mvu/aBAfFE+ak
+        KqMcmd3P10gkp4VG5x0VmllQSoLRBDz8hW0lk1j9ZZL44LUC3DFDl9RQAouC
+        UcNiTE8+ZB9N/V9NZvA6KLil2jzmKcrpd24foeB1EpfaqOyKM4E8lwybwQ22
+        27IH750MK4q+SOHF+QFeLUBc5YxsTYE3Yo/g1Qok+i6qSlZl9sQKEvijEKOe
+        ZIhfJdLokscQbzq45ZI1fWy6aGV0tOLxiIx1UvDcUiQbUeq9M6dPlbNUQlj6
+        rRGiTJXSkJHfty15k9DfUC6aMqhg+sawzAZv9DbEyQ5nAEgP5Qe2cyS1k7Nl
+        xQEnQ7s158ZE4BF7uClQj9nBayW4N5UF2h+I6etCpcw6rNYrbEMr48ycS+01
+        DWq+vy+vfIqVoeLL6j7ZvVMKvBKkc8xbw1C2w3w61/fWATUTwIq2N3MuxE/t
+        /OEy1WWxc7Z7lbskPA5LDSVgUVGaFvXFD9qLD0gQOuuEUeksi35DLMA0HHt3
+        TcXOuVNK4uVXGM/qYGE7UFRY1pIfuF0htp1kESHgvAk2CreJqM+TYRhg9o4G
+        H5whg3F/OPDH/ji0rwobfKvkM+kFYdgfhpNROBii3qrAawvZ7nn+X5TUFrIs
+        WefdDnu+fdZvumY+ouw0jCcZojwXFQ5JtDOsWHKd1FNab0yc2bNGwKcizdZQ
+        U2qyYrjBVK3BQjoG+I2bWBxRymwZAro6mFNht/yR01HEF5IrzY2d5eMRIiHU
+        y81mtaFVxjoEP6gb3FoKvLdz0PeWLhqXaMrNghbp136fMd0I0eL6a9eOEaet
+        +bOqT93/RfIPSogsGV8HAAA=
+    http_version: 
+  recorded_at: Tue, 03 Mar 2015 22:35:06 GMT
+recorded_with: VCR 2.9.3
