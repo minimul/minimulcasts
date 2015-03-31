@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/1292740145/purchase
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="utf-8"?>
+        <Purchase xmlns="http://schema.intuit.com/finance/v3" sparse="false">
+        <Line>
+        <Description>Rink Liner</Description>
+        <Amount>419.99</Amount>
+        <DetailType>AccountBasedExpenseLineDetail</DetailType>
+        <AccountBasedExpenseLineDetail>
+        <CustomerRef>1</CustomerRef>
+        <AccountRef>28</AccountRef>
+        </AccountBasedExpenseLineDetail>
+        </Line>
+        <AccountRef>36</AccountRef>
+        <PaymentType>Cash</PaymentType>
+        </Purchase>
+    headers:
+      Content-Type:
+      - application/xml
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - OAuth gem v0.4.7
+      Content-Length:
+      - '434'
+      Authorization:
+      - OAuth oauth_body_hash="zlVeGVvnayEZv8UKva%2Bal8RCt20%3D", oauth_consumer_key="<CONSUMER_KEY>",
+        oauth_nonce="kVkMXVM61NSD28kphFffyQJdVjtYT2msEMLIBUpk88", oauth_signature="0SWZB66igeJu3CbZgULV9VZ4QWw%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1427804818", oauth_token="<ACCESS_TOKEN>",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 31 Mar 2015 12:26:59 GMT
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '498'
+      Intuit-Tid:
+      - 2b42ad05-3e9f-4d61-b42c-bf621be2c4dd
+      Via:
+      - 1.1 ipp-gateway-ap06
+      Cache-Control:
+      - max-age=0, no-cache, no-store, must-revalidate, private
+      Expires:
+      - '0'
+      Qbo-Version:
+      - '84.409'
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAIVTXW/iMBD8K1Fe7gmcQKEFLa74aKVKPdpCeu97yXJYTewo
+        dhD597chbUg5XfsU73hmdr27gdtjlnoHKqwyeuaH/cD3SMcmUfrPzH+N7ns3
+        vmcd6gRTo2nmV2T9WwkP2pXKbcjmRlvy2ETbmb93Lp8KYeM9ZdhXJ04/NpnY
+        KY06JnEY+p5TGfsMgnDUC4a9YRgFo+lgPB1N+tcThq6nQeBLeC6LeI9snZgM
+        FZf2snjiSnIsLKt3mFpi1kMiw3EAgr+wrXQcmTfSkoFzAD/J4QodSlgWhI4i
+        zi8v0tdJm9QgOix4ROte84Tj5DvZJRXEOXF01HzoykF8YPCoNDUvad6xIhsX
+        Knc8ELlR+s2rCQWILg7zzJTayatw0p9MQLyHrHWo0qjKSc7juMYW3MPk7pgT
+        j6k2ahi1W8uEL6ncttI6k1GxoZ2nsR7ePKt+WG+hisTb8lxdiUXl1/V3qK3t
+        WbZSvC4WU++eeIvk4IYLbzkSFipN8XdKW4eutHJt3AcC4uIOIjwuTUK1bv20
+        5m6e49b0f+8RTcf/KW+LB956Lmw4/lzYM1YZaXdq1hLtHkQXgcg4TOfZeRot
+        0G7x3VHCmpP8wrSk5ih5AWo9iFMEzdXoCsQ7SXQEomvUBnz8/B/KvyiyxZDP
+        AwAA
+    http_version: 
+  recorded_at: Tue, 31 Mar 2015 12:27:00 GMT
+recorded_with: VCR 2.9.3

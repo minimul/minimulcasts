@@ -44,10 +44,14 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'vcr'
   gem 'webmock'
 end
+
+group :test, :development do
+  gem 'factory_girl_rails'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

@@ -25,4 +25,27 @@ describe 'QBO requests' do
       expect(result.id).to eq 159
     end
   end
+
+  it 'creates a purchase' do
+    account = create(:account)
+    base = Quickbooks::Base.new(account, :purchase)
+    purchase = Quickbooks::Model::Purchase.new
+    purchase.payment_type = 'Cash'
+    purchase.account_id = 36
+    line_item = Quickbooks::Model::PurchaseLineItem.new
+    line_item.amount = 419.99
+    line_item.description = "Rink Liner"
+    line_item.account_based_expense! do |detail|
+      detail.account_id = 28
+      detail.customer_id = 1
+    end
+    purchase.line_items = []
+    purchase.line_items << line_item
+    #puts purchase.to_xml
+    VCR.use_cassette("qbo/purchase/create", record: :none) do
+      result = base.service.create(purchase)
+      expect(result.id).to_not be nil
+    end
+
+  end
 end

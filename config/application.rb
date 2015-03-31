@@ -19,5 +19,11 @@ module Minimulcasts
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    def load_console(app = self)
+      super
+      project_specific_irbrc = File.join(Rails.root, ".irbrc")
+      puts "Loading project specific .irbrc ..."
+      load(project_specific_irbrc) if File.exists?(project_specific_irbrc)
+    end
   end
 end
