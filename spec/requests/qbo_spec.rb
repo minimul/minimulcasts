@@ -31,12 +31,12 @@ describe 'QBO requests' do
     base = Quickbooks::Base.new(account, :purchase)
     purchase = Quickbooks::Model::Purchase.new
     purchase.payment_type = 'Cash'
-    purchase.account_id = 36
+    purchase.account_id = 36 # Sandbox bank/asset account: Savings
     line_item = Quickbooks::Model::PurchaseLineItem.new
     line_item.amount = 419.99
     line_item.description = "Rink Liner"
     line_item.account_based_expense! do |detail|
-      detail.account_id = 28
+      detail.account_id = 28 # Sandbox expense account: Disposal fees
       detail.customer_id = 1
     end
     purchase.line_items = []

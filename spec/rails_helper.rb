@@ -5,6 +5,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'factory_girl_rails'
 require 'vcr'
+require 'awesome_print'
 
 VCR.configure do |config|
   config.cassette_library_dir = Rails.root.join('spec', 'vcr')
