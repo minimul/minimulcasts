@@ -46,6 +46,27 @@ describe 'QBO requests' do
       result = base.service.create(purchase)
       expect(result.id).to_not be nil
     end
-
   end
+
+  it 'uploads an attachment associated with a bill' do
+    account = create(:account)
+    base = Quickbooks::Base.new(account, :upload)
+    meta = Quickbooks::Model::Attachable.new
+    meta.file_name      = "qbo-attachment-1.pdf"
+    meta.content_type   = "application/pdf"
+    # Bill reference
+    entity       = Quickbooks::Model::BaseReference.new
+    entity.type  = 'Bill'
+    entity.value = 126
+    attach_ref = Quickbooks::Model::AttachableRef.new(entity)
+    meta.attachable_ref = attach_ref 
+    file = File.open("#{fixture_path}/qbo-attachment.pdf", "r")
+    #puts meta.to_xml
+    VCR.use_cassette("qbo/attachment/assoc_with_bill", record: :none) do
+      result = base.service.upload(file.path, "application/pdf", meta)
+      expect(result.id).to_not be nil
+      expect(Nokogiri::XML(result.to_xml.to_s).at('AttachableRef > EntityRef').content).to eq '126'
+    end
+  end
+
 end

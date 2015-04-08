@@ -13,6 +13,7 @@ VCR.configure do |config|
   config.filter_sensitive_data('<ACCESS_TOKEN>') { URI.encode_www_form_component(ENV['MINIMULCASTS_ACCESS_TOKEN']) }
   config.filter_sensitive_data('<CONSUMER_KEY>') { URI.encode_www_form_component(ENV['MINIMULCASTS_CONSUMER_KEY']) }
 end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
